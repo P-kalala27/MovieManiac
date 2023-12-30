@@ -1,10 +1,16 @@
+import MovieList from "./components/MovieList/MovieList"
+import Navbar from "./components/Navbar/Navbar"
 
-function App() {
 
+const App = () => {
   return (
-    <>
-      <h2 className="text-center text-3xl bg-blue-500">hello from react</h2>
-    </>
+    <div className="grid grid-row-[80px auto] bg-black text-gray-300">
+      <Navbar />
+
+      <main className=" font-palanquin">
+        <MovieList />
+      </main>
+    </div>
   )
 }
 
