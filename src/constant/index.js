@@ -5,9 +5,9 @@ export const navLinks = [
 ]
 
 export const rating = [
-    {value: "5+ Star"},
-    {value: "4+ Star"},
-    {value: "3+ Star"},
+    {value: "8+ Star"},
+    {value: "7+ Star"},
+    {value: "6+ Star"},
 ]
 
 export const shorting = [

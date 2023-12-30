@@ -1,22 +1,33 @@
-import star from "../../assets/star.png"
+import star from "../../assets/star.png";
 
-const MovieCard = () => {
+const MovieCard = ({movie}) => {
   return (
-    <a className="w-52 h-3/6 rounded shadow-sm m-4 overflow-hidden relative">
-        <img src="https://www.vintagemovieposters.co.uk/wp-content/uploads/2023/03/IMG_1887-scaled.jpeg" 
-        alt="movie" className="w-full h-full rounded"/>
-        <div className="w-full h-full absolute p-3">
-            <h3>Movie Name</h3>
-            <div>
-                <p>10-20-2022</p>
-                <p>5.0 <img src={star} alt="rating" /></p>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Cum consectetur quo quidem vitae molestiae eligendi!
-             </p>
+    <a className="w-52 h-full rounded shadow-sm m-4 
+    overflow-hidden relative cursor-pointer
+     hover:scale-105 transition-all" href={`https://www.themoviedb.org/movie/${movie.id}`} target="_blank" rel="noreferrer">
+      <img
+        src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
+        alt="movie"
+        className="w-full h-full rounded"
+      />
+      <div className="w-full h-full absolute p-3 top-0 flex flex-col justify-end
+        bg-gradient-to-t from-slate-950 scale-105 opacity-0 hover:opacity-100 transition-all">
+        <h3 className="text-xl text-orange-500 text-center font-semibold pb-1">
+         {movie.original_title}
+        </h3>
+        <div className="flex justify-evenly items-center text-orange-500">
+          <p className="text-xl">{movie.release_date}</p>
+          <p className="flex items-center text-xl leading-3">
+            {movie.vote_average}
+            <img src={star} alt="rating" className=" w-4 h-4 " />
+          </p>
         </div>
+        <p className="text-sm py-2 text-center italic font-medium">
+          {movie.overview.slice(0, 100)+ "..."}
+        </p>
+      </div>
     </a>
-  )
-}
+  );
+};
 
-export default MovieCard
+export default MovieCard;
