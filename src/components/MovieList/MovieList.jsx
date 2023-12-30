@@ -1,4 +1,5 @@
 import { filters, rating, shorting } from "../../constant"
+import MovieCard from "./MovieCard"
 
 
 const MovieList = () => {
@@ -34,8 +35,8 @@ const MovieList = () => {
                 </select>
             </div>
         </div>
-        <div>
-            
+        <div className="flex flex-wrap justify-evenly">
+            <MovieCard />
         </div>
     </section>
   )
