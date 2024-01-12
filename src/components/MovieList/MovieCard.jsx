@@ -1,3 +1,6 @@
+/* eslint-disable no-undef */
+/* eslint-disable react/prop-types */
+
 import star from "../../assets/star.png";
 
 const MovieCard = ({movie}) => {
@@ -27,6 +30,15 @@ const MovieCard = ({movie}) => {
         </p>
       </div>
     </a>
+    // <div className="w-52 h-full rounded bg-white m-4 overflow-hidden
+    //  relative cursor-pointer hover:scale-105 transition-all">
+    //   <div className="">
+    //   <a href={`https://www.themoviedb.org/movie/${movie.id}`}
+    //    target="_blank" rel="noreferrer">
+    //     hello
+    //   </a>
+    //   </div>
+    // </div>
   );
 };
 
