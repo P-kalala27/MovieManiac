@@ -4,7 +4,7 @@ import { BiMoon, BiSun } from "react-icons/bi";
 
 
 // eslint-disable-next-line react/prop-types
-const DarkBtn = ({id}) => {
+const DarkBtn = () => {
     useEffect(()=> {
       const isDark = localStorage.getItem("isDarkMode")
       if(isDark === "true"){
@@ -25,8 +25,8 @@ const DarkBtn = ({id}) => {
         </button>
 
         <a href="/home" className=" scroll-smooth transition-all">
-        <button onClick={id} className="fixed bottom-4 right-4 bg-gray-900 rounded-lg
-         text-gray-200 px-4 py-5 animate-bounce text-2xl dark:bg-gray-100 dark:text-gray-950">
+        <button className="fixed bottom-4 right-4 bg-gray-900 rounded-lg
+         text-gray-200 px-1 py-3 animate-bounce  dark:bg-gray-100 dark:text-gray-950 z-50">
           <AiOutlineArrowUp className="text-xl font-bold"/>
         </button>
         </a>

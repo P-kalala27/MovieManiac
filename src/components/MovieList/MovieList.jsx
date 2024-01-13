@@ -22,7 +22,7 @@ const MovieList = ({type, title}) => {
     // api
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [type]);
 
   useEffect(()=>{
     if(sort.by !== "default"){

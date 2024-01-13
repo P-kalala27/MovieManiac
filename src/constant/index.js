@@ -1,7 +1,7 @@
 export const navLinks = [
-    {href: "#popular", label:"Popular"},
-    {href: "#top_rated", label:"Top Rated"},
-    {href: "#upcoming", label:"Upcoming"},
+    {href: "/", label:"Popular"},
+    {href: "/top_rated", label:"Top Rated"},
+    {href: "/upcoming", label:"Upcoming"},
 ]
 
 export const rating = [

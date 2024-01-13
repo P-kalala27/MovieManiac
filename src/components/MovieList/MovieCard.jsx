@@ -1,13 +1,14 @@
 /* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
 import star from "../../assets/star.png";
 
 const MovieCard = ({movie}) => {
   return (
-    <a className="w-52 h-full rounded shadow-sm m-4 
+    <Link className="w-52 h-full rounded shadow-sm m-4 
     overflow-hidden relative cursor-pointer
-     hover:scale-105 transition-all" href={`https://www.themoviedb.org/movie/${movie.id}`} target="_blank" rel="noreferrer">
+     hover:scale-105 transition-all" to={`/movie/${movie.id}`} target="_blank" rel="noreferrer">
       <img
         src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
         alt="movie"
@@ -29,7 +30,7 @@ const MovieCard = ({movie}) => {
           {movie.overview.slice(0, 100)+ "..."}
         </p>
       </div>
-    </a>
+    </Link>
     // <div className="w-52 h-full rounded bg-white m-4 overflow-hidden
     //  relative cursor-pointer hover:scale-105 transition-all">
     //   <div className="">

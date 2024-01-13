@@ -1,17 +1,20 @@
+import { Route, Routes } from 'react-router-dom';
+
 import DarkBtn from "./components/MovieList/DarkBtn";
 import MovieList from "./components/MovieList/MovieList";
+import SingleMovie from './components/MovieList/SingleMovie';
 import Navbar from "./components/Navbar/Navbar";
 
 const moviesList = [
-  {value:"popular", title:"Popular"},
-  {value:"top_rated", title:"Top Rated"},
-  {value:"upcoming", title:"Upcoming"}
+  {value:"popular", title:"Popular", path:"/"},
+  {value:"top_rated", title:"Top Rated", path:"/top_rated"},
+  {value:"upcoming", title:"Upcoming", path:"/upcoming"}
 ]
 
 
 const App = () => {
   return (
-    <div className="dark:bg-gray-950">
+    <div className=" max-container dark:bg-gray-950">
       <div className="grid grid-row-1 text-gray-300">
         <Navbar />
         <DarkBtn />
@@ -19,13 +22,15 @@ const App = () => {
         <MovieList type="top_rated" title="Top Rated"/>
         <MovieList type="upcoming" title="Upcoming"/> */}
         <main className="grid">
-        <div className="py-1">
+        <Routes>
         {
           moviesList.map((movie) => (
-            <MovieList type={movie.value} title={movie.title} key={movie} />
+            <Route key={movie} path={movie.path} 
+            element={<MovieList type={movie.value} title={movie.title}  />} />
           ))
         }
-        </div>
+        <Route path='/movie/:movieId' element={<SingleMovie />}/>
+        </Routes>
         </main>
     </div>
     </div>
