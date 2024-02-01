@@ -24,7 +24,7 @@ const DarkBtn = () => {
             <BiMoon className="dark:hidden"/>
         </button>
 
-        <a href="/home" className=" scroll-smooth transition-all">
+        <a href="/" className=" scroll-smooth transition-all">
         <button className="fixed bottom-4 right-4 bg-gray-900 rounded-lg
          text-gray-200 px-1 py-3 animate-bounce  dark:bg-gray-100 dark:text-gray-950 z-50">
           <AiOutlineArrowUp className="text-xl font-bold"/>
